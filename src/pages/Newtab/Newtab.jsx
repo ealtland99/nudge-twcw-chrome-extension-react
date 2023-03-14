@@ -11,6 +11,9 @@ const Newtab = () => {
         <p>
           Edit <code>src/pages/Newtab/Newtab.js</code> and save to reload.
         </p>
+        <h1>
+          This page will be disabled in the future as it is unneeded for my application.
+        </h1>
         <a
           className="App-link"
           href="https://reactjs.org"
