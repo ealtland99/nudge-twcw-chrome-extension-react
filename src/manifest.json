@@ -4,8 +4,10 @@
   "name": "TW/CW Nudge Chrome Extension with React & Webpack",
   "description": "A chrome extension to nudge social media posters to use TW/CW (built with React 18, Webpack 5, and Webpack Dev Server 4)",
   "options_page": "options.html",
-  "background": { "service_worker": "background.bundle.js" },
-  "action": {
+  "background": { 
+    "service_worker": "background.bundle.js" 
+  },
+  "browser_action": {
     "default_popup": "popup.html",
     "default_icon": "icon-34.png"
   },
