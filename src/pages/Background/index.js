@@ -1,6 +1,7 @@
 console.log('This is the background page.');
 console.log('Put the background scripts here.');
 
+/*
 function init() {
     console.log("Initializing ChETA");
     var link = document.createElement('link');
@@ -64,3 +65,4 @@ function getInputsByValue(value) {
 }
 
 init();
+*/

@@ -6,7 +6,7 @@ import logo from '../../assets/img/logo.svg';
 import Greetings from '../../containers/Greetings/Greetings';
 import './Popup.css';
 
-/* const Popup = () => {
+const Popup = () => {
   return (
     <div className="App">
       <header className="App-header">
@@ -26,14 +26,14 @@ import './Popup.css';
       </header>
     </div>
   );
-}; */
+}; 
 
-
+/*
 class Popup extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      uniqueCode: `<cheta>`,
+      uniqueCode: '<cheta>',
       inputs: {
         priceperword: '0.05'
       }
@@ -60,7 +60,7 @@ class Popup extends Component {
       code: 'var config = ' + JSON.stringify(config)
     }, function() {
       chrome.tabs.executeScript({
-        file: 'chetalib/chetalib.js'
+        file: 'pages/Popup/Popup.jsx'
       });
     })
 
@@ -95,11 +95,11 @@ class Popup extends Component {
           </div>
         </div>
         <div className="footer">
-          <a href="https://juancurti.com" target="_blank"><p>Juan Curti - 2020</p></a>
+          <a href="https://www.linkedin.com/in/emily-altland-84613014a/" target="_blank"><p>Emily Altland - 2023</p></a>
         </div>
       </div>
     )
   };
 };
-
+*/
 export default Popup;
