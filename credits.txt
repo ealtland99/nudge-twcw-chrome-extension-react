@@ -1,6 +1,0 @@
-Bolierplate used as code starter from - https://github.com/lxieyang/chrome-extension-boilerplate-react
-
-Starter functionality from Cheta application - https://github.com/junacutri/cheta-extension/tree/master/cheta-extension
-
-
-Thank you!!

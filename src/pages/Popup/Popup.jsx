@@ -15,6 +15,7 @@ const Popup = () => {
           Edit <code>src/pages/Popup/Popup.jsx</code> and save to reload.
         </p>
         <p> Hello World! </p>
+        <p> You are {activeTab.url.includes("twitter.com/compose/tweet") ? "on" : "NOT on"} the Twitter posting page! </p>
         <a
           className="App-link"
           href="https://reactjs.org"
