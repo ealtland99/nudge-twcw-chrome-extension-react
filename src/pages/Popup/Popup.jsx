@@ -9,11 +9,14 @@ import './Popup.css';
 
 
 const Popup = () => {
-  const activeTab = document.addEventListener("DOMContentLoaded", async () => {
-    const currentTab = await chrome.tabs.query({currentWindow: true, active: true});
-    console.log(currentTab.url);
-    return currentTab.url;
-  });
+  const activeTab = async function getCurrentTab() {
+    let queryOptions = { active: true, lastFocusedWindow: true };
+    // `tab` will either be a `tabs.Tab` instance or `undefined`.
+    let [tab] = await chrome.tabs.query(queryOptions);
+    //console.log("tab: ", tab);
+    //console.log("tab.url", tab.url)
+    return tab.url;
+  };
 
   return (
     <div className="App">
@@ -23,7 +26,7 @@ const Popup = () => {
           Edit <code>src/pages/Popup/Popup.jsx</code> and save to reload.
         </p>
         <p> Hello World! </p>
-        <p id="onTwitter"> You are {activeTab && activeTab.includes("twitter.com/compose/tweet") ? "on" : "NOT on"} the Twitter posting page! </p>
+        <p> active tab is: {activeTab} </p>
         <a
           className="App-link"
           href="https://reactjs.org"
