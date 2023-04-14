@@ -5,8 +5,14 @@ import React from 'react';
 import logo from '../../assets/img/logo.svg';
 import Greetings from '../../containers/Greetings/Greetings';
 import './Popup.css';
+import { getActiveTabURL } from "../Background/index";
+
 
 const Popup = () => {
+  document.addEventListener("DOMContentLoaded", async () => {
+    const activeTab = await getActiveTabURL();
+  });
+
   return (
     <div className="App">
       <header className="App-header">
@@ -15,7 +21,7 @@ const Popup = () => {
           Edit <code>src/pages/Popup/Popup.jsx</code> and save to reload.
         </p>
         <p> Hello World! </p>
-        <p> You are {activeTab.url.includes("twitter.com/compose/tweet") ? "on" : "NOT on"} the Twitter posting page! </p>
+        <p> You are {activeTab.url && activeTab.url.includes("twitter.com/compose/tweet") ? "on" : "NOT on"} the Twitter posting page! </p>
         <a
           className="App-link"
           href="https://reactjs.org"

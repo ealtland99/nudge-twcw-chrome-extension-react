@@ -5,7 +5,10 @@
   "description": "A chrome extension to nudge social media posters to use TW/CW (built with React 18, Webpack 5, and Webpack Dev Server 4)",
   "options_page": "options.html",
   "background": { 
-    "service_worker": "background.bundle.js" 
+    "service_worker": "background.bundle.js",
+    "scripts": [
+      "/pages/Background/index.js"
+    ]
   },
   "action": {
     "default_popup": "popup.html",

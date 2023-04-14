@@ -1,6 +1,12 @@
 console.log('This is the background page.');
 console.log('Put the background scripts here.');
 
+export async function getActiveTabURL() {
+    const currentTab = await chrome.tabs.query({currentWindow: true, active: true});
+    console.log(currentTab.url);
+    return currentTab.url;
+}
+
 /*
 function init() {
     console.log("Initializing ChETA");
