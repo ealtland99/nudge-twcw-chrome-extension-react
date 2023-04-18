@@ -1,16 +1,15 @@
 /*global chrome*/
-//import React, { Component } from 'react';
+import React, { Component } from 'react';
 
-import React from 'react';
+//import React from 'react';
 import logo from '../../assets/img/logo.svg';
 //import Greetings from '../../containers/Greetings/Greetings';
 import './Popup.css';
 //import { activeTabId } from "../Background/index";
-import { getActiveTabURL } from "../../../utils/active.js";
+//import { getActiveTabURL } from "../../../utils/active.js";
 
 
-
-const Popup = () => {
+class Popup extends Component {
   /*const activeTab = async function getCurrentTab() {
     let queryOptions = { active: true, currentWindow: true };
     // `tab` will either be a `tabs.Tab` instance or `undefined`.
@@ -24,40 +23,45 @@ const Popup = () => {
     return tabs[0].url;
     });*/
 
-  var urlHTML;
+  // constructor (props) {
+  //   super (props);
+  //   this.state = {
+  //     activeTab: ""
+  //   };
+  // }
 
-  document.addEventListener("DOMContentLoaded", async () => {
-    const activeTab = await getActiveTabURL();
-    
-    if (activeTab && activeTab.url.includes("twitter.com/compose/tweet")) {
-      urlHTML = "You are on the Twitter posting page!";
-    } 
-    else {
-      urlHTML = "You are NOT on the Twitter posting page!";
-    }
-  });
+  /*chrome.tabs.onUpdated.addListener((tabId, tab) => {
+    const queryParameters = tab.url.split("?")[1];
+      const urlParameters = new URLSearchParams(queryParameters);
+  
+      chrome.tabs.sendMessage(tabId, {
+        type: "NEW",
+        videoId: urlParameters.get("v"),
+      });
+  });*/
 
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/pages/Popup/Popup.jsx</code> and save to reload.
-        </p>
-        <p> Hello World! </p>
-        <p> URL is {urlHTML} </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React!
-        </a>
-      </header>
-    </div>
-  );
-}; 
+  render() {
+    return (
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <p>
+            Edit <code>src/pages/Popup/Popup.jsx</code> and save to reload.
+          </p>
+          <p> Hello World! </p>
+          <a
+            className="App-link"
+            href="https://reactjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Learn React!
+          </a>
+        </header>
+      </div>
+    );
+  }
+};
 
 
 
