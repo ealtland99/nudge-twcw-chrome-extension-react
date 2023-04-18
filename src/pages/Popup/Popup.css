@@ -1,5 +1,3 @@
-
-
 .App {
   position: relative;
   top: 0px;
@@ -9,7 +7,7 @@
   text-align: center;
   height: 100%;
   padding: 10px;
-  background-color: #d66e93;
+  background-color: #adadad;
 }
 
 .App-logo {
@@ -41,98 +39,12 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
 
 #onTwitter {
-  color: blue;
   font-weight: bold;
 }
-
-/*
-@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
-
-html {
-	width: 100%;
-}
-
-body {
-  margin: 0px;
-  height: 400px;
-  width: 280px;
-  font-family: 'Special Elite', sans-serif;
-  background: white;
-}
-
-body .header {
-  width: 280px;
-  height: 50px;
-  margin: 0px;
-  background-color: #b0ff8b;
-  padding: 12px 0px;
-}
-
-body .header h1 {
-  font-family: 'Special Elite';
-  font-size: 28px;
-  opacity: 0.9;
-  margin: 0px 4px 0px 4px;
-  font-weight: 500;
-}
-
-body .header p {
-  margin: 0px 4px;
-  font-family: 'Special Elite';
-  font-weight: 400;
-  font-size: 14px;
-}
-
-body .header input, body .header #priceperwordInput {
-  text-align: center;
-  font-family: 'Special Elite';
-  font-weight: 400;
-  font-size: 14px;
-}
-
-body .header #priceperwordInput {
-  width: 80px;
-}
-
-body .footer {
-  width: 280px;
-  height: 40px;
-  margin: 0px;
-  background-color: #b0ff8b;
-  padding: 6px 0px;
-  text-align: center;
-}
-
-body .footer a {
-  text-decoration: none;
-}
-
-body .contentBox {
-  width: 280px;
-  height: 310px;
-}
-
-body .contentBox .resalted {
-  background-color: rgba(176, 255, 139, 0.7);
-  text-decoration: underline;
-}
-
-body .contentBox .no-tf-dtctd {
-  margin: 0 10px;
-  text-align: center;
-  font-size: 14px;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-body .contentBox .no-tf-dtctd a {
-  text-align: right;
-}
-*/
