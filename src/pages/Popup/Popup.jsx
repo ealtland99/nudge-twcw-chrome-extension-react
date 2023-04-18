@@ -3,20 +3,39 @@
 
 import React from 'react';
 import logo from '../../assets/img/logo.svg';
-import Greetings from '../../containers/Greetings/Greetings';
+//import Greetings from '../../containers/Greetings/Greetings';
 import './Popup.css';
-//import { getActiveTabURL } from "../Background/index";
+//import { activeTabId } from "../Background/index";
+import { getActiveTabURL } from "../../../utils/active.js";
+
 
 
 const Popup = () => {
-  const activeTab = async function getCurrentTab() {
-    let queryOptions = { active: true, lastFocusedWindow: true };
+  /*const activeTab = async function getCurrentTab() {
+    let queryOptions = { active: true, currentWindow: true };
     // `tab` will either be a `tabs.Tab` instance or `undefined`.
     let [tab] = await chrome.tabs.query(queryOptions);
     //console.log("tab: ", tab);
     //console.log("tab.url", tab.url)
     return tab.url;
-  };
+  };*/
+
+  /*var activeTab = chrome.tabs.query({active: true, currentWindow: true}, tabs => {
+    return tabs[0].url;
+    });*/
+
+  var urlHTML;
+
+  document.addEventListener("DOMContentLoaded", async () => {
+    const activeTab = await getActiveTabURL();
+    
+    if (activeTab && activeTab.url.includes("twitter.com/compose/tweet")) {
+      urlHTML = "You are on the Twitter posting page!";
+    } 
+    else {
+      urlHTML = "You are NOT on the Twitter posting page!";
+    }
+  });
 
   return (
     <div className="App">
@@ -26,7 +45,7 @@ const Popup = () => {
           Edit <code>src/pages/Popup/Popup.jsx</code> and save to reload.
         </p>
         <p> Hello World! </p>
-        <p> active tab is: {activeTab} </p>
+        <p> URL is {urlHTML} </p>
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -39,6 +58,13 @@ const Popup = () => {
     </div>
   );
 }; 
+
+
+
+// <p> active tab is: {activeTab} </p>
+// <p> You are {activeTab && activeTab.includes("twitter.com/compose/tweet") ? "on" : "NOT on"} the Twitter posting page! </p>
+
+
 
 /*
 class Popup extends Component {

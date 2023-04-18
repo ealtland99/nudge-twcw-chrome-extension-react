@@ -1,6 +1,44 @@
 console.log('This is the background page.');
 console.log('Put the background scripts here.');
 
+chrome.tabs.onUpdated.addListener((tabId, tab) => {
+    const queryParameters = tab.url.split("?")[1];
+      const urlParameters = new URLSearchParams(queryParameters);
+  
+      chrome.tabs.sendMessage(tabId, {
+        type: "NEW",
+        videoId: urlParameters.get("v"),
+      });
+  });
+
+/*
+var activeTabId;
+
+chrome.tabs.onActivated.addListener(function(activeInfo) {
+  activeTabId = activeInfo.tabId;
+});
+
+function getActiveTab(callback) {
+  chrome.tabs.query({ currentWindow: true, active: true }, function (tabs) {
+    var tab = tabs[0];
+
+    if (tab) {
+      callback(tab);
+    } else {
+      chrome.tabs.get(activeTabId, function (tab) {
+        if (tab) {
+            console.log(tab.url);
+            callback(tab.url);
+        } else {
+            console.log('No active tab identified.');
+        }
+      });
+
+    }
+  });
+}
+*/
+
 /*export async function getActiveTabURL() {
     const currentTab = await chrome.tabs.query({currentWindow: true, active: true});
     console.log(currentTab.url);
