@@ -4,7 +4,7 @@ import './Popup.css';
 
 
 const Popup = () => {
-  const [activeTab, setactiveTab] = useState("soemthiing");
+  const [activeTab, setactiveTab] = useState("something");
 
   React.useEffect(() => {
     let queryOptions = { active: true, currentWindow: true };
