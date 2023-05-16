@@ -1,10 +1,16 @@
-<img src="src/assets/img/icon-128.png" width="64"/>
+<img src="src/assets/img/TWIST_logo.png" width="64"/>
 
-# Chrome Extension (MV3) Boilerplate with React 18 and Webpack 5
+# Trigger Warning Includer for Sensitive Topics (TWIST)
 
 [![npm](https://img.shields.io/npm/v/chrome-extension-boilerplate-react)](https://www.npmjs.com/package/chrome-extension-boilerplate-react)
 [![npm-download](https://img.shields.io/npm/dw/chrome-extension-boilerplate-react)](https://www.npmjs.com/package/chrome-extension-boilerplate-react)
 [![npm](https://img.shields.io/npm/dm/chrome-extension-boilerplate-react)](https://www.npmjs.com/package/chrome-extension-boilerplate-react)
+
+## Description
+
+TW/CW Nudge Chrome Extension with React & Webpack
+
+Chrome Extension that will detect when someone posting on Twitter is about to make a text post that is detected to be sensitive and prompt that user to add a warning with instructions on how to do so and why it’s important.
 
 ## Announcements
 

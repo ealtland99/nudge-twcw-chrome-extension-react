@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "manifest_version": 3,
-  "name": "TW/CW Nudge Chrome Extension with React & Webpack",
+  "name": "Trigger Warning Includer for Sensitive Topics (TWIST)",
   "description": "A chrome extension to nudge social media posters to use TW/CW (built with React 18, Webpack 5, and Webpack Dev Server 4)",
   "options_page": "options.html",
   "background": {
@@ -9,14 +9,14 @@
   },
   "action": {
     "default_popup": "popup.html",
-    "default_icon": "icon-34.png"
+    "default_icon": "TWIST_logo.png"
   },
   "permissions": [
     "tabs",
     "activeTab"
   ],
   "icons": {
-    "128": "icon-128.png"
+    "128": "TWIST_logo.png"
   },
   "content_scripts": [
     {
@@ -38,8 +38,7 @@
     {
       "resources": [
         "content.styles.css",
-        "icon-128.png",
-        "icon-34.png"
+        "TWIST_logo.png"
       ],
       "matches": []
     }
